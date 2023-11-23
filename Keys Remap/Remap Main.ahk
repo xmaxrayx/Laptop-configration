@@ -37,23 +37,13 @@ LWin & c:: {
 ;===============
 ;remap caps lock
 ;==============
-~CapsLock::{
-    SetCapsLockState("AlwaysOff")
-}
-;===ww
-CapsLock & A::{
-    SetCapsLockState("Off")
-    Send("^c")  
-}
-;===
-CapsLock & s::{
-    SetCapsLockState("Off")
-    Send("^v")
-}
-;===
-
-;
-CapsLock & q::CapsOff.Send("{Media_Play_Pause}",true)
+CapsLock::CapsOff
+;===copy
+CapsLock & A::CapsOff.Send("^c")
+;===pasta
+CapsLock & s::CapsOff.Send("^v")
+;===play/pause
+CapsLock & q::CapsOff.Send("{Media_Play_Pause}")
 
 
 

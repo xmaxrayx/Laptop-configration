@@ -1,6 +1,10 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
+
+SetCapsLockState("AlwaysOff")
+
+
 ;CapsOff.Send("s",true)
 ;
 CapsLock:: CapsOff
@@ -19,13 +23,13 @@ class CapsOff {
             SetCapsLockState("AlwaysOff")
             ;SetCapsLockState("Off")
             Send(keys)
-            ; If IsSet(strictMode){
-            ;     if (strictMode) == true{
-            ;         KeyWait "CapsLock"
-            ;         SetCapsLockState("AlwaysOff")
-            ;         ;MsgBox (keys)
-            ;     }
-            ; }
+            If IsSet(strictMode){
+                if (strictMode) == true{
+                    KeyWait "CapsLock"
+                    SetCapsLockState("AlwaysOff")
+                    ;MsgBox (keys)
+                }
+            }
             
         }   ;end of class call
     }
