@@ -1,3 +1,4 @@
+;xMaxrayx ;unbreakable-ray [Laptop HQ]  
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
@@ -7,8 +8,8 @@ SetCapsLockState("AlwaysOff")
 
 ;CapsOff.Send("s",true)
 ;
-CapsLock:: CapsOff
-CapsLock & q::CapsOff.Send("{Media_Play_Pause}",true)
+; CapsLock:: CapsOff
+; CapsLock & q::CapsOff.Send("{Media_Play_Pause}",true)
 
 
 class CapsOff {
@@ -32,5 +33,12 @@ class CapsOff {
             }
             
         }   ;end of class call
+    }
+}
+
+;;
+class CapsOn{
+    static Call(){
+        SetCapsLockState ("on")
     }
 }

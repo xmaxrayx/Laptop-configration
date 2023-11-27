@@ -4,26 +4,27 @@
 #SingleInstance Force
 #Include "%A_ScriptDir%\AHKv2-Lib\CapsOff.ahk"
 
-
+InstallKeybdHook
+InstallMouseHook
 
 ;====
 
 ;remap the window key to f18
-~LWin:: f18
+~LWin::F18
 
 ;remap the left window key (F18) to Rwin 
-LWin & F1:: RWin
+~LWin & F1:: RWin
 
 ;remap the chat to discord
 ;
-LWin & c:: {
+~LWin & ~c:: {
     Sleep(50)
     Send("^c")
     ;MsgBox
     
     ;Run A_ComSpec '  "cmd C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe"' ,, "Hide"
     ;Run A_ComSpec '/c "C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe" --processStart" ' 
-    ;Run A_ComSpec '/c "C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe" --processStart'
+    ;Run A_ComSpec '/c "C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe" --processStart'~
    ; Run A_ComSpec ' ""/k C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe" && "processStart Discord.exe""' 
     ;Run '"cmd C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe"'
     ;C:\Users\Max_Laptop\AppData\Local\Discord\Update.exe --processStart Discord.exe
@@ -36,14 +37,21 @@ LWin & c:: {
 
 ;===============
 ;remap caps lock
-;==============
-CapsLock::CapsOff
+;=============
+~CapsLock::{
+    CapsOff
+    Sleep(50)
+    Send("!{Tab}")
+    Sleep(50)
+    Send("{Media_Play_Pause}")
+}
 ;===copy
-CapsLock & A::CapsOff.Send("^c")
+~CapsLock & ~A::CapsOff.Send("^c")
 ;===pasta
-CapsLock & s::CapsOff.Send("^v")
+
+~CapsLock & ~s::CapsOff.Send("^v")
 ;===play/pause
-CapsLock & q::CapsOff.Send("{Media_Play_Pause}")
+~CapsLock & ~q::CapsOff.Send("{Media_Play_Pause}")
 
 
 
