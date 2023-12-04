@@ -10,6 +10,7 @@ InstallMouseHook
 ;====
 
 ;remap the window key to f18
+;~LWin::Send("{F18}")
 ~LWin::F18
 
 ;remap the left window key (F18) to Rwin 

@@ -5,7 +5,7 @@ InstallKeybdHook
 #SingleInstance Force
 #Include "%A_ScriptDir%\AHKv2-Lib\checkIniFile.ahk"
 
-author :="@xMaxrayx @Unbreakable-ray"
+author :="@xMaxrayx @Unbreakable-ray [Code : ReBorn]"
 
 messageText := " `t {Can we prove we are stronger than before?}"
 

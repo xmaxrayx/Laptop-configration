@@ -1,0 +1,32 @@
+[nat]=native
+[ahk]=by ahk and need to change it no native
+[?]=need to add it
+[!] need to fix it
+*********genral*************************[ ]
+pause the ahk script=  F4
+
+
+
+*********3d view&edit********************[ ]
+[nat]3rd view=  space
+-----
+[ahk]3rd view=  r_mouse
+[ahk]insert(i)= t
+[ahk]left-menue(t) =  shift+t
+[ahk]  T				/?right-menue(n)=  shift+6
+[ahk] Y   	     /? move/size in Y axes=  y
+[ahk] C   		/?circle select=  sift+c
+[ahk] H          /?hide=  f1
+[ahk] shift+H  /?unhide  ->  shift+f1
+[ahk] Dotnumpad  /?close View -> ctrl+space
+ 
+
+----------------------------
+[add_future]
+
+
+
+[done]ctrl+space -> . /numpad
+---
+[?]??????????=  mid_mouse
+
