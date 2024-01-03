@@ -62,7 +62,8 @@ LWin & =::excelMathWriter("SUM")
 
 ;=time changer
 
-~^'::{
-    A_Clipboard := (ExcelTime(6))
+^+;::
+{
+    A_Clipboard := (ExcelTime(1))
     Send '^v'
 }
